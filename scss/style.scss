@@ -121,6 +121,25 @@ img {
 		}
 	}
 }
+// * Color
+.color {
+	padding: 0px 0px 150px 0px;
+}
+.color__row {
+	display: flex;
+	gap: 80px;
+}
+.color__column {
+	text-align: center;
+}
+.item-color__body {
+	line-height: 130%;
+}
+.item-color__title {
+	font-size: 20px;
+	font-weight: 700;
+	margin: 20px 0px 10px 0px;
+}
 // * Footer
 .footer {
 	background-color: var(--black);
