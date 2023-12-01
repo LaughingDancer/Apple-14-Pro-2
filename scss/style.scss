@@ -1,0 +1,75 @@
+@import "_null.scss";
+// * Main selectors
+:root {
+	--black: #0a0a0a;
+	--gray-text: #717171;
+	--white: #fff;
+	--gray-bgc: #f5f5f7;
+	--purple: #490e84;
+	--deep-purple: #574b63;
+}
+body {
+	font-family: "Inter", sans-serif;
+	font-size: 14px;
+	color: var(--black);
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	min-height: 100%;
+}
+[class*="__container"] {
+	margin: 0 auto;
+	max-width: 1230px;
+	padding: 0 15px;
+}
+.navigation__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--gray-text);
+	font-size: 24px;
+}
+.navigation__menu {
+	display: flex;
+	flex: 0 0 580px;
+}
+.navigation__link {
+	color: var(--gray-text);
+}
+.navigation__number {
+	display: flex;
+	flex: 0 0 580px;
+	justify-content: flex-end;
+}
+// * Header
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: var(--black);
+}
+.header__container {
+	min-height: 113px;
+}
+.header__list {
+	display: flex;
+	gap: 30px;
+}
+// * Main
+.main {
+	flex: 1 1 auto;
+}
+// * Footer
+.footer {
+	background-color: var(--black);
+}
+.footer__container {
+	min-height: 150px;
+}
+.footer__item {
+	font-size: 14px;
+	line-height: 130%;
+}
