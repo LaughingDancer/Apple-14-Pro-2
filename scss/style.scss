@@ -140,6 +140,50 @@ img {
 	font-weight: 700;
 	margin: 20px 0px 10px 0px;
 }
+// * Iphone-form
+.iphone-form__container {
+	display: flex;
+}
+.iphone-form__form {
+	padding: 137px 90px 138px;
+}
+.form-iphone {
+	background-color: var(--deep-purple);
+}
+.form-iphone__title {
+	color: var(--white);
+	font-size: 32px;
+	font-weight: 700;
+	margin: 0px 0px 72px 0px;
+}
+.form-iphone__form {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	line-height: 130%;
+	& input {
+		color: var(--white);
+		padding: 0px 0px 10px 3px;
+		background-color: var(--deep-purple);
+		border-bottom: var(--gray-bgc) 1px solid;
+	}
+	& p {
+		text-align: center;
+		color: var(--white);
+		opacity: 0.5;
+		margin: 0px 0px 16px 0px;
+	}
+}
+.form-iphone__button {
+	text-align: center;
+}
+.button-form-iphone {
+	color: var(--purple);
+	background-color: var(--white);
+	border-radius: 30px;
+	padding: 16px 81px;
+	font-weight: 700;
+}
 // * Footer
 .footer {
 	background-color: var(--black);
