@@ -11,15 +11,20 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="navigation__container header__container">
-			<nav class="navigation__menu">
-				<ul class="navigation__list header__list">
-					<li class="navigation__item"><a class="navigation__link" href="#">Что нового</a></li>
-					<li class="navigation__item"><a class="navigation__link" href="#">Цвет</a></li>
-					<li class="navigation__item"><a class="navigation__link" href="#">Заказать</a></li>
-				</ul>
-			</nav>
+				<div class="navigation__menu">
+					<div class="menu__icon"><span></span></div>
+					<nav class="navigation__body">
+					<ul class="navigation__list header__list">
+						<li class="navigation__item"><a class="navigation__link" href="#">Что нового</a></li>
+						<li class="navigation__item"><a class="navigation__link" href="#">Цвет</a></li>
+						<li class="navigation__item"><a class="navigation__link" href="#">Заказать</a></li>
+						<li class="navigation__item none-tablet"><a class="navigation__link" href="#">+38 050-456-56-56</a></li>
+						<li class="navigation__item none-tablet"><a class="navigation__link" href="#">Политика конфиденциальности</a></li>
+					</ul>
+				</nav>
+				</div>
 			<div class="navigation__logo"><a href="index.html"><img src="./image/logo.svg" alt="Logo"></a></div>
-			<div class="navigation__number">+38 050-456-56-56</div>
+			<div class="navigation__number hidden-tablet">+38 050-456-56-56</div>
 			</div>
 		</header>
 		<main class="main">
@@ -49,11 +54,11 @@
 					<h2 class="title">ВЫБЕРИ СВОЙ ЦВЕТ</h2>
 					<div class="color__row">
 						<div class="color__column">
-								<div><a href="#"><img src="./image/Apple-iPhone-14-Pro-Max-Silver.jpg" alt="iPhone 14 Pro Max Silver"></a></div>
-								<div class="item-color__body">
-									<h3 class="item-color__title">Silver</h3>
-									<p class="item-color__descriptio">Серебристый</p>
-								</div>
+									<div><a href="#"><img src="./image/Apple-iPhone-14-Pro-Max-Silver.jpg" alt="iPhone 14 Pro Max Silver"></a></div>
+									<div class="item-color__body">
+										<h3 class="item-color__title">Silver</h3>
+										<p class="item-color__descriptio">Серебристый</p>
+									</div>
 						</div>
 						<div class="color__column">
 								<div><a href="#"><img src="./image/Apple-iPhone-14-Pro-Max-DeepPurple.jpg" alt="iPhone 14 Pro Max DeepPurple"></a></div>
@@ -98,13 +103,14 @@
 			<div class="navigation__container footer__container">
 				<nav class="navigation__menu">
 					<ul class="navigation__list">
-						<li class="navigation__item footer__item"><a class="navigation__link" href="#">Политика конфиденциальности</a></li>
+						<li class="navigation__item footer__item hidden-tablet"><a class="navigation__link" href="#">Политика конфиденциальности</a></li>
 					</ul>
 				</nav>
 				<div class="navigation__logo"><a href="index.html"><img src="./image/logo.svg" alt="Logo"></a></div>
-				<div class="navigation__number">+38 050-456-56-56</div>
+				<div class="navigation__number hidden-tablet">+38 050-456-56-56</div>
 				</div>
 		</footer>
 	</div>
+	<script src="./js/script.js"></script>
 </body>
 </html>

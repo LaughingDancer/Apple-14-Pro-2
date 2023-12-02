@@ -19,6 +19,9 @@ body {
 	&::-webkit-scrollbar-thumb {
 		background-color: var(--black);
 	}
+	&._lock {
+		overflow: hidden;
+	}
 }
 .wrapper {
 	display: flex;
@@ -65,10 +68,14 @@ body {
 	flex: 0 1 580px;
 	justify-content: flex-end;
 }
+.navigation__number {
+	z-index: 200;
+}
 .navigation__logo {
-	& img {
-		max-width: 100%;
-	}
+	z-index: 200;
+}
+.none-tablet {
+	display: none;
 }
 .title {
 	color: var(--gray-text);
@@ -92,6 +99,9 @@ body {
 	display: flex;
 	gap: 30px;
 }
+.menu__icon {
+	display: none;
+}
 // * Main
 .main {
 	flex: 1 1 auto;
@@ -101,6 +111,9 @@ body {
 	background-color: var(--gray-bgc);
 	padding: 184px 0px 40px 0px;
 	text-align: center;
+	& img {
+		max-width: 100%;
+	}
 }
 .iphone__title {
 	color: var(--purple);
@@ -110,9 +123,6 @@ body {
 }
 .iphone__picture {
 	margin: 0px 0px 45px 0px;
-	& img {
-		max-width: 100%;
-	}
 }
 .button-iphone {
 	background-color: var(--purple);
@@ -159,9 +169,10 @@ body {
 }
 .color__row {
 	display: flex;
-	gap: 80px;
+	margin: 0px -40px;
 }
 .color__column {
+	padding: 0px 40px;
 	text-align: center;
 	& img {
 		max-width: 100%;
@@ -190,6 +201,7 @@ body {
 }
 .form-iphone__title {
 	color: var(--white);
+	text-align: center;
 	font-size: 32px;
 	font-weight: 700;
 	margin: 0px 0px 72px 0px;
@@ -207,8 +219,7 @@ body {
 	}
 	& p {
 		text-align: center;
-		color: var(--white);
-		opacity: 0.5;
+		color: rgba(255, 255, 255, 0.5);
 		margin: 0px 0px 16px 0px;
 	}
 }
@@ -236,4 +247,201 @@ body {
 .footer__item {
 	font-size: 14px;
 	line-height: 130%;
+}
+@media (max-width: 1230px) {
+	// * Main selectors
+	[class*="__container"] {
+		max-width: 970px;
+	}
+	// * about-new-iphone
+	.about-new-iphone {
+		padding: 80px 0px;
+	}
+	// * color
+	.color__column {
+		flex: 0 1 50%;
+		padding: 0;
+		margin: 0px 0px 40px 0px;
+	}
+	.color__row {
+		flex-wrap: wrap;
+		margin: 0;
+	}
+	.color {
+		padding: 0px 0px 20px 0px;
+	}
+	// * Form
+	.iphone-form__picture {
+		width: 50%;
+	}
+}
+@media (max-width: 991.98px) {
+	// * Main selectors
+	[class*="__container"] {
+		max-width: 750px;
+	}
+	.none-tablet {
+		display: block;
+	}
+	// * Header
+	.menu__icon {
+		display: block;
+		z-index: 40;
+		position: relative;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		& span,
+		&::after,
+		&::before {
+			left: 0;
+			position: absolute;
+			height: 10%;
+			width: 100%;
+			transition: all 0.3s ease 0s;
+			background-color: var(--white);
+		}
+		&::after,
+		&::before {
+			content: "";
+		}
+		&::after {
+			bottom: 0;
+		}
+		&::before {
+			top: 0;
+		}
+		& span {
+			top: 50%;
+			transform: scale(1) translate(0px, -50%);
+		}
+		&._active {
+			& span {
+				transform: scale(0) translate(0px, -50%);
+			}
+			&::before {
+				top: 50%;
+				transform: rotate(-45deg) translate(0px, -50%);
+			}
+			&::after {
+				bottom: 50%;
+				transform: rotate(45deg) translate(0px, 50%);
+			}
+		}
+	}
+	.navigation__body {
+		position: fixed;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: var(--black);
+		padding: 130px 30px 30px 30px;
+		transition: left 0.3s ease 0s;
+		overflow: auto;
+		z-index: 30;
+		&::before {
+			content: "";
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 113px;
+			background-color: var(--black);
+			z-index: 10;
+		}
+	}
+	.navigation__body._active {
+		left: 0;
+		&::before {
+			left: 0;
+		}
+	}
+	.header__list {
+		flex-direction: column;
+		align-items: center;
+		gap: 46px;
+		text-align: center;
+		& .navigation__link {
+			font-size: 24px;
+			color: var(--white);
+		}
+	}
+	.navigation__container {
+		display: flex;
+	}
+	.hidden-tablet {
+		visibility: hidden;
+	}
+	// *Iphone-form
+	.iphone-form__form {
+		padding: 100px 30px;
+	}
+	.form-iphone__title {
+		font-size: 22px;
+		margin: 0px 0px 40px 0px;
+	}
+	// * about-new-iphone
+	.about-new-iphone__picture {
+		display: none;
+	}
+	.about-new-iphone__small-container {
+		justify-content: center;
+	}
+}
+@media (max-width: 767.98px) {
+	// * Main selectors
+	[class*="__container"] {
+		max-width: none;
+	}
+	.navigation__number {
+		font-size: 14px;
+	}
+	.title {
+		margin: 0px 0px 25px 0px;
+	}
+	// * Iphone
+	.iphone__title {
+		color: var(--purple);
+		font-size: 48px;
+		font-weight: 700;
+		margin: 0px 0px 40px 0px;
+	}
+	// * about-new-iphone
+	.about-new-iphone {
+		padding: 50px 0px;
+	}
+	// * Form
+	.iphone-form__picture {
+		display: none;
+	}
+	.form-iphone {
+		flex: 1 1 auto;
+	}
+	// * Color
+	.color__row {
+		flex-direction: column;
+	}
+}
+@media (max-width: 479.98px) {
+	// * about-new-iphone
+	.about-new-iphone__body {
+		font-size: 18px;
+	}
+	// * Iphone
+	.iphone {
+		padding: 140px 0px 40px 0px;
+	}
+	.button-iphone {
+		font-size: 18px;
+		padding: 18px 80px 18px 80px;
+	}
+	// *Iphone-form
+	.iphone-form__form {
+		padding: 50px 30px;
+	}
+	// * Footer
+	.footer__item {
+		font-size: 2px;
+	}
 }
