@@ -102,10 +102,6 @@ body {
   color: var(--black);
 }
 
-img {
-  max-width: 100%;
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -129,7 +125,7 @@ img {
 
 .navigation__menu {
   display: flex;
-  flex: 0 0 580px;
+  flex: 0 1 580px;
 }
 
 .navigation__link {
@@ -138,8 +134,12 @@ img {
 
 .navigation__number {
   display: flex;
-  flex: 0 0 580px;
+  flex: 0 1 580px;
   justify-content: flex-end;
+}
+
+.navigation__logo img {
+  max-width: 100%;
 }
 
 .title {
@@ -187,6 +187,9 @@ img {
 .iphone__picture {
   margin: 0px 0px 45px 0px;
 }
+.iphone__picture img {
+  max-width: 100%;
+}
 
 .button-iphone {
   background-color: var(--purple);
@@ -225,6 +228,10 @@ img {
   font-weight: 700;
 }
 
+.about-new-iphone__picture img {
+  max-width: 100%;
+}
+
 .color {
   padding: 0px 0px 150px 0px;
 }
@@ -236,6 +243,9 @@ img {
 
 .color__column {
   text-align: center;
+}
+.color__column img {
+  max-width: 100%;
 }
 
 .item-color__body {
@@ -250,6 +260,9 @@ img {
 
 .iphone-form__container {
   display: flex;
+}
+.iphone-form__container img {
+  max-width: 100%;
 }
 
 .iphone-form__form {
